@@ -1,0 +1,7 @@
+.root__main-container {
+  background-color: tomato;
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+}
