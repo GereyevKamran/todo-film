@@ -1,1 +1,74 @@
+.root__about {
+  background-image: url(https://img.tyt.by/n/afisha/0a/6/korona_kinoteatr_001.jpg);
+  width: 100%;
+}
 
+.about__container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250px;
+  width: 800px;
+  background-color: white;
+}
+
+.div-text__h3-text {
+  font-size: 26px;
+  color: darkslategray;
+}
+
+.container-wrapper__div-text {
+  margin-top: 20px;
+}
+
+.container-wrapper__container-text {
+  border: solid 1px white;
+  margin-top: 10px;
+}
+
+.container-text__tekst {
+  font-size: 20px;
+  text-align: justify;
+  padding: 20px;
+}
+
+.film-about__film-img {
+  background-image: url(https://www.kinonews.ru/insimgs/2020/poster/thumbs/poster91764_1.jpg);
+  display: flex;
+  height: 200px;
+  width: 150px;
+}
+
+.film-about__tekst {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.div-container__name-film {
+  font-size: x-large;
+  margin-bottom: 5px;
+}
+
+.film-container__reytinq {
+  display: flex;
+  align-items: center;
+}
+
+.div-container__film-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.film-container__film-about {
+  width: 600px;
+  display: flex;
+}
+
+.container-wrapper__div-container {
+  margin-top: 30px;
+  border-bottom: 1px solid black;
+}

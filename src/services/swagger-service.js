@@ -1,27 +1,21 @@
-export default class SwaggerService {
-  _apiBase = "https://kinopoiskapiunofficial.tech";
+const token = "58d451d6-729e-4419-a2d4-8547f1f99e58";
 
-  async getResorse() {
-    const res = await fetch(`${this._apiBase}${url}`);
+export const getRate = async () => {
+  let movies = [];
 
-    if (!res.ok) {
-      throw new Error(`Could not fetch ${url}` + `recived  ${res.status}`);
+  await fetch(
+    "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-API-KEY": token,
+      },
     }
+  )
+    .then((response) => response.json())
+    .then((response) => (movies = response.films))
+    .catch((error) => console.log("error------>", error));
 
-    return await res.json();
-  }
-
-  async getAllFilms() {
-    const res = await this.getResorse(`/api/v2.1/films/`);
-    return res.results;
-  }
-
-  getAllFilm(id) {
-    return this.getResorse(`/api/v2.1/films/${id}`);
-  }
-}
-
-const swagger = new SwaggerService();
-swagger.getAllFilms().then((body) => {
-  console.log(body);
-});
+  return movies;
+};

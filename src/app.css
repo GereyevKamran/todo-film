@@ -1,0 +1,42 @@
+.root__container-list {
+  background-color: tomato;
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  list-style-type: none;
+  position: sticky;
+  top: 0;
+}
+
+.container-list__logo {
+  font-size: 60px;
+  font-family: fantasy;
+}
+
+.container-list__home {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-transform: uppercase;
+  color: rgb(85, 46, 179);
+}
+
+.container-list__about {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-transform: uppercase;
+  color: rgb(85, 46, 179);
+}
+
+.container-list__film {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-transform: uppercase;
+  color: rgb(85, 46, 179);
+}

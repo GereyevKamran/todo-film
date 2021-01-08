@@ -1,0 +1,49 @@
+.root__wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(116, 73, 21);
+}
+
+.wrapper__header {
+  display: flex;
+  justify-content: center;
+}
+
+.root__dictionary {
+  display: flex;
+  justify-content: center;
+}
+
+.card__image {
+  height: 400px;
+  width: 500px;
+  display: flex;
+}
+
+.card__city {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  font-size: 25px;
+  font-family: initial;
+}
+
+.card__countries {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.remove__btn {
+  display: flex;
+  position: absolute;
+  color: white;
+  background-color: black;
+}
+
+.card__about {
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+}
