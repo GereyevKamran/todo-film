@@ -1,22 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useReducer, useEffect } from "react";
 import Cards from "./cards";
-import * as api from "../../services/swagger-service";
+import { getRate } from "../../REST";
+import constants from "../../constants/constants";
+import { initialState, reducer } from "../../reducer/reducer";
 
 import "./film.css";
 
 const FilmRating = () => {
-  const [movies, setMovies] = useState([]);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  useEffect(async () => {
-    //
-    const films = api.getRate(); //componentDidMount - когда срендерился(отрисовался) компонент
-    setMovies(await films);
-
-    return () => {
-      //componentWillUnmount - когда кмопонент удалился из вёрстки
-      setMovies([]);
-    };
+  useEffect(() => {
+    getRate().then((res) => {
+      dispatch({
+        type: constants.SAVE_CARDS,
+        payload: res.films,
+      });
+    });
   }, []);
+
+  const { movies } = state;
+
+  const handleRemove = (filmId) => {
+    console.log(filmId);
+    dispatch({
+      type: constants.REMOVE_CARD,
+      payload: filmId,
+    });
+  };
 
   return (
     <div data-at={"root__wrapper"}>
@@ -28,11 +38,13 @@ const FilmRating = () => {
           {movies.length
             ? movies.map((move, index) => (
                 <Cards
+                  id={move.filmId}
                   key={index}
                   citys={move.nameEn}
                   about={move.year}
                   images={move.posterUrl}
                   countries={move.rating}
+                  onRemove={handleRemove}
                 />
               ))
             : null}
@@ -42,4 +54,4 @@ const FilmRating = () => {
   );
 };
 
-export default React.memo(FilmRating);
+export default FilmRating;

@@ -40,3 +40,9 @@
   text-transform: uppercase;
   color: rgb(85, 46, 179);
 }
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
