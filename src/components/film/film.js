@@ -36,14 +36,14 @@ const FilmRating = () => {
       <div className={"root__dictionary"}>
         <div>
           {movies.length
-            ? movies.map((move, index) => (
+            ? movies.map((film, index) => (
                 <Cards
-                  id={move.filmId}
+                  id={film.filmId}
                   key={index}
-                  citys={move.nameEn}
-                  about={move.year}
-                  images={move.posterUrl}
-                  countries={move.rating}
+                  filmName={film.nameEn}
+                  about={film.year}
+                  images={film.posterUrl}
+                  raiting={film.rating}
                   onRemove={handleRemove}
                 />
               ))
