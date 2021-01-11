@@ -34,10 +34,10 @@ function Navbar ()  {
           </ul>
 
           <Switch>
-            <Route exact path="/" exact component={Home}>
+            <Route  path="/" exact component={Home}>
               <Home />
             </Route>
-            <Route exact path="/" component={LogoFilm}>
+            <Route  path="/" component={LogoFilm}>
               <LogoFilm />
             </Route>
             <Route path="/about" component={About}>

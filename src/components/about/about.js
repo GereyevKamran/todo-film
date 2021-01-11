@@ -39,7 +39,7 @@ function About() {
           </div>
           <div className={"div-container__film-container"}>
             <div className={"film-container__film-about"}>
-              <img className={"film-about__film-img"}></img>
+              <img alt="" className={"film-about__film-img"}></img>
               <p className={"film-about__tekst"}>
                 Страна: США, Венгрия, Канада Жанр: драма, приключения,
                 фантастика Режиссер: Дени Вильнев В главных ролях: Ребекка
@@ -59,7 +59,7 @@ function About() {
           </div>
           <div className={"div-container__film-container"}>
             <div className={"film-container__film-about"}>
-              <img className={"film-about__film-img"}></img>
+              <img alt="" className={"film-about__film-img"}></img>
               <p className={"film-about__tekst"}>
                 Страна: США Жанр: детектив, драма, исторический, криминал,
                 триллер Режиссер: Мартин Скорсезе В главных ролях: Роберт Де
@@ -74,6 +74,6 @@ function About() {
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(About);
