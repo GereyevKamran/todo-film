@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Film from "../film/film";
 import Home from "../home/home";
@@ -8,7 +8,7 @@ import LogoFilm from "../logo-film/logo-film";
 
 import "./navbar.css";
 
-const Navbar = () => {
+function Navbar ()  {
   return (
     <div>
       <Router>
@@ -53,4 +53,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

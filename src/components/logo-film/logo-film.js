@@ -2,8 +2,8 @@ import React from "react";
 
 import "./logo-film.css";
 
-const LogoFilm = () => {
+function LogoFilm() {
   return <div></div>;
-};
+}
 
-export default LogoFilm;
+export default React.memo(LogoFilm);

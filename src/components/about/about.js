@@ -2,7 +2,7 @@ import React from "react";
 
 import "./about.css";
 
-const About = () => {
+function About() {
   return (
     <div className={"root__about"}>
       <div className={"about__container-wrapper"}>
@@ -76,4 +76,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default React.memo(About);

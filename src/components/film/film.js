@@ -6,7 +6,7 @@ import { initialState, reducer } from "../../reducer/reducer";
 
 import "./film.css";
 
-const FilmRating = () => {
+function FilmRating() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -52,6 +52,6 @@ const FilmRating = () => {
       </div>
     </div>
   );
-};
+}
 
-export default FilmRating;
+export default React.memo(FilmRating);
