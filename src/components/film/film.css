@@ -7,11 +7,15 @@
 .wrapper__header {
   display: flex;
   justify-content: center;
+  background-color: burlywood;
+  color: steelblue;
+  font-family: cursive;
 }
 
 .root__dictionary {
   display: flex;
   justify-content: center;
+  background-color: cadetblue;
 }
 
 .card__image {
@@ -20,7 +24,7 @@
   display: flex;
 }
 
-.card__city {
+.card__film {
   display: flex;
   justify-content: center;
   margin-top: 45px;
@@ -28,7 +32,7 @@
   font-family: initial;
 }
 
-.card__countries {
+.card__raiting {
   display: flex;
   justify-content: center;
   font-size: 25px;
